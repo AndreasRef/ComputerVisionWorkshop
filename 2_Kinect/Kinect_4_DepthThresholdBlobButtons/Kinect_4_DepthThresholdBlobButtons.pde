@@ -24,7 +24,7 @@ boolean newFrame=false;
 
 //ControlP5
 int minDepth =  60; // Which pixels do we care about?
-int maxDepth = 966; //914
+int maxDepth = 800; //914
 
 int programHeight = 480;
 boolean positiveNegative = true;
