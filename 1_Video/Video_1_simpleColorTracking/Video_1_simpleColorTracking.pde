@@ -64,8 +64,8 @@ void draw() {
     }
   }
 
-  // We only consider the color found if its color distance is less than 10. 
-  // This threshold of 10 is arbitrary and you can adjust this number depending on how accurate you require the tracking to be.
+  // We only consider the color found if its color distance is less than 1000. 
+  // This threshold of 1000 is arbitrary and you can adjust this number depending on how accurate you require the tracking to be.
   if (worldRecord < 1000) { 
     // Draw a circle at the tracked pixel
     fill(trackColor);
