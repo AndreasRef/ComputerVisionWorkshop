@@ -12,6 +12,8 @@ Capture video;
 // A variable for the color we are searching for.
 color trackColor; 
 
+boolean drawVideo = true;
+
 void setup() {
   size(640, 360);
   String[] cameras = Capture.list();
@@ -29,7 +31,7 @@ void captureEvent(Capture video) {
 
 void draw() {
   video.loadPixels();
-  image(video, 0, 0);
+  if(drawVideo) image(video, 0, 0);
 
   // Before we begin searching, the "world record" for closest color is set to a high number that is easy for the first pixel to beat.
   float worldRecord = 500; 
@@ -83,4 +85,6 @@ void mousePressed() {
   // Save color where the mouse is clicked in trackColor variable
   int loc = mouseX + mouseY*video.width;
   trackColor = video.pixels[loc];
+  drawVideo = false;
+  background(0);
 }

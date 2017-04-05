@@ -30,7 +30,6 @@ void draw() {
   for (int i = 0; i < faces.length; i++) {
     println(faces[i].x + ", FACE" + faces[i].y);
     rect(faces[i].x, faces[i].y, faces[i].width, faces[i].height);
- 
   }
 }
  
